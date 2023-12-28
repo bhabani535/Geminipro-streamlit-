@@ -16,19 +16,16 @@ from IPython.display import display
 from IPython.display import Markdown
 
 
-def to_markdown(text):
-  text = text.replace('•', '  *')
-  return Markdown(textwrap.indent(text, '> ', predicate=lambda _: True))
-
 os.getenv("GOOGLE_API_KEY")
 genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 
 ## Function to load OpenAI model and get respones
-
+model = genai.GenerativeModel('gemini-pro')
+chat = model.start_chat(history=[])
 def get_gemini_response(question):
-    model = genai.GenerativeModel('gemini-pro')
-    response = model.generate_content(question)
-    return response.text
+    
+    response =chat.send_message(question,stream=True)
+    return response
 
 ##initialize our streamlit app
 
@@ -47,4 +44,8 @@ if submit:
     
     response=get_gemini_response(input)
     st.subheader("The Response is")
-    st.write(response)
+    for chunk in response:
+        print(st.write(chunk.text))
+        print("_"*80)
+    
+    st.write(chat.history)
