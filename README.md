@@ -1,9 +1,9 @@
 # Gemini Pro Streamlit
 #Chat
-                 https://mapszgvwn4ihzyqci3snwu.streamlit.app/
-https://2s6ob6wdcaxbcxdrkupuis.streamlit.app/
+                 https://qd3qduwtv2ybxtvh5jfprq.streamlit.app/
+https://mjewzklu7z5ickdawrjebq.streamlit.app/
 	#Image Generate- 
-                        https://hi237grnuqug57jqndkzdq.streamlit.app/
+                        https://lhqixcz5t7chymxq7hnuvf.streamlit.app/
 	#Gemini LLM- 
-                         https://bwc5v8m994v5ziczedvshw.streamlit.app/
+                         https://lrywgtndvjpejqtzpugsf5.streamlit.app/
 
